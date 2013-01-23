@@ -1,6 +1,8 @@
 Nastachku::Application.routes.draw do
 
-  root to: "web/home#index"
+  root to: "web/welcome#index"
+
+  mount Ckeditor::Engine => '/ckeditor'
 
   scope :module => :web do
     resources :users, only: [:new, :create, :index]
@@ -14,7 +16,7 @@ Nastachku::Application.routes.draw do
       resources :pages
       resources :news
 
-      root to: "home#index"
+      root to: "welcome#index"
     end
   end
 
