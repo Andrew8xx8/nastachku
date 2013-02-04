@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-MemberEditType.create({ email: 'admin@undev.home', name: 'Admin', password: '12345', password_confirmation: '12345'}) { |u|
+UserEditType.create({ email: 'admin@undev.home', name: 'Admin', password: '12345', password_confirmation: '12345' }) { |u|
   u.admin = true
   u.activate
 }

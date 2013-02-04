@@ -12,6 +12,7 @@ FactoryGirl.define do
     after(:create) do |u|
       u.activate
     end
+    
   end
 
   factory :admin, :parent => :user do
