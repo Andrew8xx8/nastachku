@@ -27,6 +27,7 @@ gem 'validates'
 gem 'virtus'
 gem 'js-routes'
 
+gem 'configus'
 gem 'omniauth'
 gem 'omniauth-facebook'
 
