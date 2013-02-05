@@ -7,7 +7,7 @@
   - unless signed_in?
     = link_to t('.join'), new_user_path, class: 'btn btn-large'
 
-= render "/layouts/web/welcome/themes"
+= render "themes"
 .border
-= render "/layouts/web/welcome/want_to_do"
+= render "want_to_do"
 .border
