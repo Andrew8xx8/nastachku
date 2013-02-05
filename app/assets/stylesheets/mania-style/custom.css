@@ -22,6 +22,10 @@ header .info {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
+abbr[title],
+abbr[data-original-title] {
+	cursor: default;
+}
 .form-horizontal.form-type-login .form-actions {
 	padding-left: 0;
 	padding-right: 0;
