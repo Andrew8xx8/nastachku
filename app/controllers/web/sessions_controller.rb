@@ -6,10 +6,9 @@ class Web::SessionsController < Web::ApplicationController
   end
 
   def create
-    user = UserEditType.find_by_email(params[:user][:email])
-
-    if user.try(:authenticate, params[:user][:password])
-      flash_success
+  user = UserEditType.find_by_email(params[:user][:email])
+  if user.try(:authenticate, params[:user][:password])
+    flash_success
 
       sign_in(user)
       redirect_to root_path
