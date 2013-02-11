@@ -5,7 +5,7 @@ class Web::UsersController < Web::ApplicationController
   end
 
   def new
-    @user = UserEditType.new
+    @user = current_user || UserEditType.new
   end
 
   def create

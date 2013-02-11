@@ -4,14 +4,13 @@
   .span12
     .formy
       .form
-        = simple_form_for @user do |f|
+        = simple_form_for @user, url: users_path(), method: :post do |f|
           .row-fluid
             .span4
               = f.input :first_name
             
             .span4
               = f.input :last_name
-
             .span4
               = f.input :company
 

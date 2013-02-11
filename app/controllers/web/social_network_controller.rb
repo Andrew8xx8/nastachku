@@ -24,7 +24,7 @@ class Web::SocialNetworkController < Web::ApplicationController
       end
 
     end
-    redirect_to root_path
+    redirect_to new_user_path
   end
 
   def failure
