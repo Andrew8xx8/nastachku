@@ -4,6 +4,7 @@ module UserPopulator
     user.email = auth_hash[:info][:email]
     user.first_name = auth_hash[:info][:first_name]
     user.last_name = auth_hash[:info][:last_name]
+    user.city = auth_hash[:info][:location]
     user.password = SecureHelper.generate_password
     user
   end
