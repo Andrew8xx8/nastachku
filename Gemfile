@@ -27,6 +27,9 @@ gem 'validates'
 gem 'virtus'
 gem 'js-routes'
 
+gem 'omniauth'
+gem 'omniauth-facebook'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -56,4 +59,6 @@ group :development do
   gem 'rvm-capistrano'
   gem 'capistrano-ext'
   gem 'capistrano-unicorn', require: false
+  gem 'capistrano_colors'
+  gem 'capi'
 end
