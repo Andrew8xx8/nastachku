@@ -11,6 +11,9 @@ Nastachku::Application.routes.draw do
     resources :companies
     resources :cities
   end
+  # omniauth-facebook
+  get '/auth/facebook/callback' => 'web/social_network#authorization'
+  get '/auth/facebook/failure' => 'web/social_network#failure'
 
   scope :module => :web do
     resources :users, only: [:new, :create, :index]
