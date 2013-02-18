@@ -34,14 +34,10 @@ class Web::SocialNetworkControllerTest < ActionController::TestCase
     assert_response :redirect
   end
 
-  test "should get authorization with facebook on new user" do
+  test "should not get authorization with facebook on new user" do
     request.env['omniauth.auth'] = @auth_hash
     get :authorization
 
-    assert User.find_by_email(auth_hash[:info][:email])
-    assert current_user.active?
-    assert signed_in?
-    assert current_user.authorizations.any?
     assert_response :redirect
   end
 
