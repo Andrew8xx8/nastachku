@@ -30,7 +30,7 @@ class Web::SocialNetworkControllerTest < ActionController::TestCase
     @user.reload
     assert @user.active?
     assert signed_in?
-    assert current_user.authorizations
+    assert current_user.authorizations.any?
     assert_response :redirect
   end
 
