@@ -36,6 +36,8 @@ GEM
     backports (2.6.7)
     bcrypt-ruby (3.0.1)
     builder (3.0.4)
+    capi (0.1.1)
+      capistrano
     capistrano (2.14.1)
       highline
       net-scp (>= 1.0.0)
@@ -46,6 +48,7 @@ GEM
       capistrano (>= 1.0.0)
     capistrano-unicorn (0.1.6)
       capistrano
+    capistrano_colors (0.5.5)
     carrierwave (0.6.2)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
@@ -258,9 +261,11 @@ PLATFORMS
 DEPENDENCIES
   airbrake
   bcrypt-ruby (~> 3.0.0)
+  capi
   capistrano
   capistrano-ext
   capistrano-unicorn
+  capistrano_colors
   carrierwave
   ci_reporter
   ckeditor

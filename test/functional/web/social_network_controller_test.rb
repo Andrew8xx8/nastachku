@@ -41,7 +41,7 @@ class Web::SocialNetworkControllerTest < ActionController::TestCase
     assert User.find_by_email(auth_hash[:info][:email])
     assert current_user.active?
     assert signed_in?
-    assert current_user.authorizations
+    assert current_user.authorizations.any?
     assert_response :redirect
   end
 

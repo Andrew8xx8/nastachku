@@ -1,12 +1,5 @@
 ---
 ru:
-  activerecord:
-    errors:
-      models:
-        user:
-          attributes:
-            state:
-              invalid_transition: ''
   web:
     sessions:
       form:

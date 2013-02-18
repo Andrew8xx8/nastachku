@@ -25,6 +25,7 @@ Configus.build Rails.env do
     admin do
       email "admin@np.kaize.ru"
       password "123456"
+    end
     facebook do
       app_id '203315456477331'
       app_secret '0e244b346d09ed649f264445cf834348'
