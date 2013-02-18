@@ -3,7 +3,9 @@ require 'digest/md5'
 class User < ActiveRecord::Base
   include UserRepository
 
-  attr_accessible :email, :password,
+  has_many :authorizations
+
+  attr_accessible :email,   :password,
                   :first_name, :last_name, :city,
                   :company, :position,
                   :show_as_participant, :photo, :state_event, :about
