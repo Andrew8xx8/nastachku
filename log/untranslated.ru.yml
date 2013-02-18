@@ -7,3 +7,7 @@ ru:
           attributes:
             state:
               invalid_transition: ''
+  web:
+    sessions:
+      form:
+        social_networks: ''
