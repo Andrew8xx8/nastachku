@@ -15,16 +15,24 @@ Configus.build Rails.env do
     token do
       lifetime 1.hour
     end
+    facebook do
+      app_id ''
+      app_secret ''
+    end
   end
 
   env :development, parent: :production do
     admin do
       email "admin@np.kaize.ru"
       password "123456"
+    facebook do
+      app_id '203315456477331'
+      app_secret '0e244b346d09ed649f264445cf834348'
     end
   end
 
   env :test, parent: :production do
+
   end
 
   env :staging, parent: :production do
@@ -40,6 +48,9 @@ Configus.build Rails.env do
       password '123654'
     end
     
+    facebook do
+      app_id '203315456477331'
+      app_secret '0e244b346d09ed649f264445cf834348'
+    end
   end
-
 end
