@@ -23,6 +23,7 @@ class Web::SocialNetworkController < Web::ApplicationController
         redirect_to new_user_path
       else
         flash_error
+        redirect_to root_path
       end
 
     end
