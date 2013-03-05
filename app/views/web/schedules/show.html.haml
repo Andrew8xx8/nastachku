@@ -2,7 +2,7 @@
 %h3 Пятница, 12 апреля
 
 .awesome-timetable
-  .timepad
+  .timepad.timepad-areas
     - (0...6).each do |i|
       .area
         Зал
@@ -30,62 +30,97 @@
 
   .timepad
     .event.full-event.area-1.start-10.long-30
+      .time 10:00
       Регистрация
     .event.full-event.area-1.start-10.offset-30.long-30
+      .time 10:30
       Торжественное открытие
     .area-container.area-1-container
+      .area-name Зал 1
       .event.area-1.section-1.start-11.offset-15.long-30
+        .time 11:15
         .caption Cам себе кгб: как собрать досье на клиентов
         .author Виталий Мышляев
+        .continue [30 мин]
       .event.area-1.section-6.start-16.long-135
+        .time 16:00
         .caption Что сказал бы о ваших сотрудниках дедушка фрейд?
         .author Андрей Григорьев
+        .continue [2ч 15мин]
       .event.area-1.start-13.long-30.break
+        .time 13:00
         .caption Обед
+        .continue [30 мин]
 
     .area-container.area-2-container
+      .area-name Зал 2
       .event.area-2.section-2.start-11.offset-30.long-60
+        .time 11:30
         .caption Вступление в силу ФЗ-139 (закон о "безопасном интернете"): все ли готовы?
         .author Денис Давыдов
+        .continue [1ч]
       .event.area-2.section-5.start-17.long-105
+        .time 17:00
         .caption Высоконагруженные проекты для менеджеров
         .author АлександрОченьДлинный Демидов
+        .continue [1ч 45мин]
       .event.area-2.start-15.long-30.break
+        .time 15:00
         .caption Кофе-брейк
+        .continue [30 мин]
 
     .area-container.area-3-container
+      .area-name Зал 3
       .event.area-3.section-3.start-12.offset-45.long-120
+        .time 12:45 - 14:45
         .caption Вместе дружная семья или менеджмент по-семейному
         .author Константин Констанинопольский
       .event.area-3.section-4.start-18.long-90
+        .time 18:00 - 19:30
         .caption Кейс секция : реальные практики без теории
         .author Александр Прозоров
 
     .area-container.area-4-container
+      .area-name Зал 4
       .event.area-4.section-4.start-13.long-180
+        .time 13:00
         .caption Что общего между племенем тонга, университетскимисупердлиннымичтоневлезает братствами и прохождением испытательного срока?
         .author Александр Богданов
+        .continue [3ч]
       .event.area-4.section-3.start-19.long-75
+        .time 19:00
         .caption Таргетированная реклама
         .author Михаил Козлов
+        .continue [1ч 15мин]
 
     .area-container.area-5-container
+      .area-name Зал 5
       .event.area-5.section-5.start-14.long-60
+        .time 14:00
         .caption theRunet: Видео и телевидение в интернете
         .author Мария Сирош
+        .continue [1ч]
       .event.area-5.section-2.start-15.long-45
+        .time 15:00
         .caption Онлайн знакомства сегодня и завтра
         .author Максим Королев
+        .continue [45 мин]
 
     .area-container.area-6-container
-      .event.area-6.section-6.start-15.long-150
+      .area-name Зал 6
+      .event.area-6.section-6.start-15.long-60
+        .time 15:00
         .caption Новые горизонты в организации продаж
         .author Мария Питерская
-      .event.area-6.section-1.start-16.long-240
+        .continue [1ч]
+      .event.area-6.section-1.start-16.long-60
+        .time 16:00
         .caption Битва за платежи в интернете
         .author Михаил Калинин
+        .continue [1ч]
 
     .event.full-event.area-1.start-20.offset-30.long-30
+      .time 20:30
       Закрытие. Афтепати.
 
   .clearfix
