@@ -2,19 +2,6 @@ window.onload = ->
   delay = (ms, func) -> setTimeout func, ms
   delay 4000, -> $('.alert').fadeOut('slow')
 
-  $('table').delegate 'a.edit-event', 'click', ->
-    parent_row = $(this).closest('tr')
-    parent_row.next().toggleClass('hidden')
-
-  $('#my_events a.edit-event').click()
-
-  $('table').delegate 'form.edit-event[data-remote]', 'ajax:success', (evt, data, status, xhr) ->
-    row = $(this).closest('tr')
-    row.after(data)
-    row.prev().remove()
-    row.remove()
-    delay 4000, -> $('.alert').fadeOut('slow')
-
   # side bar
   affixTop = $("#nav_top").outerHeight() + $("#nav_main").outerHeight() + $("header").outerHeight() + $(".content h1:first").outerHeight() + parseInt($(".content h1:first").css('marginTop')) + parseInt($(".content h1:first").css('marginBottom'))
   affixBottom = $(".sponsors").outerHeight() + parseInt($("#main_container").css("padding-bottom"))+ parseInt($(".border").css('marginTop'))
@@ -38,8 +25,24 @@ window.onload = ->
     else
       $(".b-affix").removeClass("bottom")
 
-# Twitter Bootstrap tabs hashes
 $(document).ready ->
+  $('table').delegate 'a.edit-event', 'click', ->
+    parent_row = $(this).closest('tr')
+    parent_row.next().toggleClass('hidden')
+
+  $('#my_events a.edit-event').click()
+
+  $('table').delegate 'form.edit-event[data-remote]', 'ajax:success', (evt, data, status, xhr) ->
+    row = $(this).closest('tr')
+    row.after(data)
+    row.prev().remove()
+    row.remove()
+    delay 4000, -> $('.alert').fadeOut('slow')
+
+  # popover demo
+  $("[data-toggle=popover]").popover()
+
+  # Twitter Bootstrap tabs hashes
 
   # Automagically jump on good tab based on anchor; for page reloads or links
   $("a[href=" + location.hash + "]").tab "show"  if location.hash
@@ -52,9 +55,3 @@ $(document).ready ->
 $(window).on "popstate", ->
   anchor = location.hash or $("a[data-toggle=tab]").first().attr("href")
   $("a[href=" + anchor + "]").tab "show"
-
-
-
-# popover demo
-$(document).ready ->
-  $("[data-toggle=popover]").popover()
